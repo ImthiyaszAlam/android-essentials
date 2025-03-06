@@ -1,6 +1,4 @@
-Got it! Here’s the **final version** with `buildFeatures { buildConfig = true }` included. This ensures that `BuildConfig` is explicitly enabled in Gradle.  
 
----
 
 # **📌 Handling Different API Credentials for Debug & Release in Android**  
 
@@ -40,14 +38,14 @@ android {
         
         // 🔹 Debug build type - Used for testing
         debug {
-            buildConfigField("String", "BASE_URL", "\"https://api.surveykshan.org/\"")
+            buildConfigField("String", "BASE_URL", "\"https://apiurl1.com1/\"")
             buildConfigField("String", "AWS_API_KEY", "\"api_key_debug\"")
             buildConfigField("String", "AWS_API_SECRET", "\"api_secret_debug\"")
         }
 
         // 🔹 Release build type - Used for production
         release {
-            buildConfigField("String", "BASE_URL", "\"https://api.surveykshan.com/\"")
+            buildConfigField("String", "BASE_URL", "\"https://apiurl2.com/\"")
             buildConfigField("String", "AWS_API_KEY", "\"api_key_release\"")
             buildConfigField("String", "AWS_API_SECRET", "\"api_secret_release\"")
 
@@ -97,10 +95,10 @@ app/build/generated/source/buildConfig/debug/com/surveykshandev/BuildConfig.java
 After building the project, `BuildConfig.java` will look like this:  
 
 ```java
-package com.surveykshandev;
+package com.imthiyas;
 
 public final class BuildConfig {
-    public static final String BASE_URL = "https://api.surveykshan.org/";  // Debug mode
+    public static final String BASE_URL = "https://api.imthiyas.org/";  // Debug mode
     public static final String AWS_API_KEY = "api_key_debug";
     public static final String AWS_API_SECRET = "api_secret_debug";
 }
@@ -131,9 +129,9 @@ Go to **Build** → Click **Rebuild Project**
 ✅ **4. Check the Imports**  
 Make sure you have the correct import statement in your Kotlin/Java file:  
 ```kotlin
-import com.surveykshandev.BuildConfig
+import com.imthiyas.BuildConfig
 ```
-📌 Replace `com.surveykshandev` with your actual package name.
+📌 Replace `com.imthiyas` with your actual package name.
 
 ✅ **5. Enable Gradle Auto-Build**  
 In Android Studio:  
@@ -146,8 +144,3 @@ Go to **Settings → Build, Execution, Deployment → Compiler**
 ✔ **No manual switching** – The correct API keys are used automatically.  
 ✔ **Prevents accidental production access** – Ensures that testing doesn't interfere with real users.  
 ✔ **Security** – Avoids storing API keys directly in the code.  
-
----
-
-### **🚀 Now, your app will always use the right credentials without extra work!**  
-Let me know if you need more improvements. 😎🔥
