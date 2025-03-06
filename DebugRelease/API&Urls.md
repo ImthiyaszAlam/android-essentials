@@ -88,7 +88,7 @@ String awsApiSecret = BuildConfig.AWS_API_SECRET;
 `BuildConfig` is an **auto-generated class** created by Gradle during the build process.  
 It is located inside:  
 ```
-app/build/generated/source/buildConfig/debug/com/surveykshandev/BuildConfig.java
+app/build/generated/source/buildConfig/debug/com/imthiyas/BuildConfig.java
 ```
 
 ### **🔹 Example of Generated `BuildConfig.java`**
