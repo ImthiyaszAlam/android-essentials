@@ -1,4 +1,5 @@
-### **README: Managing Different Version Codes and Version Names in Android**  
+### **Managing Different Version Codes and Version Names in Android**  
+---
 
 This guide explains how to set **different `versionCode` and `versionName`** for **debug** and **release** builds in an Android project using Gradle.
 
